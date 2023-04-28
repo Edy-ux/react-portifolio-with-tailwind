@@ -4,7 +4,7 @@ import devedy from '../../public/avatar.png';
 const Profile = () => {
     return (
         <div className="text-center p-10 py-10">
-            <h2 className=" font-bold text-5xl py-2 text-teal-600  dark:text-teal-400 md:text-6xl">
+            <h2 className=" font-semibold text-5xl py-2 text-teal-600  dark:text-teal-400 md:text-6xl">
                 Edy Lopes
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
