@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from 'react-icons/ai';
-import devedy from '../../public/avatar.png';
-import favicon from '../../public/favicon.ico';
 import Image from 'next/image';
 import code from '../../public/code.png';
 import design from '../../public/design.png';
@@ -15,6 +12,7 @@ import web5 from '../../public/web5.png';
 import web6 from '../../public/web6.png';
 import Header from '@/components/Header';
 import Profile from '@/components/Profile';
+import metatag from '../../public/metatagog.png';
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
@@ -39,10 +37,7 @@ export default function Home() {
                     property="og:description"
                     content="Freelance fornecendo serviços de programação e desing. Estudo Analise e desenvolvimento de sistemas. Junte-se a mim e construa seu web/app site!"
                 />
-                <meta
-                    property="og:image"
-                    content="../../public/metatagog.png"
-                />
+                <meta property="og:image" content={metatag} />
 
                 {/* <!-- Twitter --> */}
                 <meta property="twitter:card" content="summary_large_image" />
@@ -63,19 +58,18 @@ export default function Home() {
                     content="../../public/metatagog.png"
                 />
             </Head>
-
             <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
                 <section className="min-h-screen">
-                    <Header />
+                    <Header {...{ setDarkMode }} />
                     <Profile />
                 </section>
                 <section id="services">
                     <div>
-                        <h3 className="text-3xl py-1  dark:text-white ">
+                        <h3 className=" text-center text-3xl py-1  dark:text-white ">
                             Serviços Que ofereço{' '}
                         </h3>
 
-                        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                        <p className="text-md text-justify py-2 leading-8 text-gray-800 dark:text-gray-200">
                             Desde o início da minha jornada como desenvolvedor
                             freelancer, já fiz trabalho remoto para{' '}
                             <span className="text-teal-500">Agências </span>
@@ -87,8 +81,7 @@ export default function Home() {
                         </p>
                         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                             Eu ofereço junto com meu time uma ampla gama de
-                            serviços, incluindo design de marca, programação e
-                            ensino.
+                            serviços, incluindo design de marca eprogramação.
                         </p>
                     </div>
                     <div className="lg:flex gap-10">
@@ -185,21 +178,16 @@ export default function Home() {
                             />
                         </div>
                         <div className="basis-1/3 flex-1 hover:-translate-y-4 duration-200 hover:animate-pulse cursor-pointer">
-                            <a
-                                href="https://edy-ux.github.io/youtube_clone/"
-                                target="_blank"
-                            >
-                                <Image
-                                    className="rounded-lg object-cover"
-                                    width={'100%'}
-                                    height={'100%'}
-                                    style={{
-                                        layout: 'responsive',
-                                    }}
-                                    src={web2}
-                                    alt=""
-                                />
-                            </a>
+                            <Image
+                                className="rounded-lg object-cover"
+                                width={'100%'}
+                                height={'100%'}
+                                style={{
+                                    layout: 'responsive',
+                                }}
+                                src={web2}
+                                alt=""
+                            />
                         </div>
                         <div
                             className="basis-1/3 flex-1 hover:-translate-y-4 
@@ -246,16 +234,18 @@ export default function Home() {
                             />
                         </div>
                         <div className="basis-1/3 flex-1">
-                            <Image
-                                className="rounded-lg object-cover"
-                                width={'100%'}
-                                height={'100%'}
-                                style={{
-                                    layout: 'responsive',
-                                }}
-                                src={web6}
-                                alt=""
-                            />
+                            <a href="https://edy-ux.github.io/youtube_clone/">
+                                <Image
+                                    className="rounded-lg object-cover"
+                                    width={'100%'}
+                                    height={'100%'}
+                                    style={{
+                                        layout: 'responsive',
+                                    }}
+                                    src={web6}
+                                    alt=""
+                                />
+                            </a>
                         </div>
                     </div>
                 </section>
