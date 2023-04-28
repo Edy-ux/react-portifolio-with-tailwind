@@ -2,7 +2,7 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 
 const Header = ({ setDarkMode }) => {
     return (
-        <section cllassName="relative">
+        <section className="relative">
             <nav className=" shadow-sm fixed top-0 right-0 z-10 h-[72px]  py-10 mb-20 flex justify-around items-center bg-white dark:bg-gray-900  dark:text-white w-full">
                 <h1 className="font-burtons text-xl">developerbyedy</h1>
                 <ul className="flex items-center">

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import Head from 'next/head';
 import Image from 'next/image';
 import code from '../../public/code.png';
@@ -14,9 +15,16 @@ import Header from '@/components/Header';
 import Profile from '@/components/Profile';
 
 export default function Home() {
-    const [darkMode, setDarkMode] = useState(false);
+    const [theme, setTheme] = useState(false);
+    const [darkMode, setDarkMode] = useLocalStorage('dark-prefer', false);
+
+    useEffect(() => {
+        setTheme(JSON.parse(localStorage.getItem('dark-prefer')));
+    }, [darkMode]);
+
+    console.log('dark', theme);
     return (
-        <div className={`${darkMode ? 'dark' : ''} min-h-screen`}>
+        <div className={theme ? 'dark' : ''}>
             <Head>
                 <title>Portfólio — Ednei Lopes Add&#123; &#125;</title>
                 <meta name="title" content="Portfólio  —  Ednei Lopes" />
@@ -56,8 +64,8 @@ export default function Home() {
                     content="Freelance fornecendo serviços de programação e desing. Estudo Analise e desenvolvimento de sistemas. Junte-se a mim e construa seu web/app site!"
                 />
                 <meta
-                    property="twitter:image"
-                    content="../../public/metatagog.png"
+                    property="og:image"
+                    content="https://github.com/Edy-ux/react-portifolio-with-tailwind/blob/master/public/metatagog.png"
                 />
             </Head>
             <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 ">
