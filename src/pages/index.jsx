@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from 'react-icons/ai';
 import devedy from '../../public/avatar.png';
 import favicon from '../../public/favicon.ico';
-
-import deved from '../../public/dev-ed-wave.png';
+import Image from 'next/image';
 import code from '../../public/code.png';
 import design from '../../public/design.png';
 import consulting from '../../public/consulting.png';
@@ -17,51 +14,60 @@ import web4 from '../../public/web4.png';
 import web5 from '../../public/web5.png';
 import web6 from '../../public/web6.png';
 import Header from '@/components/Header';
+import Profile from '@/components/Profile';
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
     return (
         <div className={darkMode ? 'dark' : ''}>
             <Head>
-                <title>Add&#123; &#125; developer Portifólio</title>
+                <title>Portfólio — Ednei Lopes Add&#123; &#125;</title>
+                <meta name="title" content="Portfólio  —  Ednei Lopes" />
                 <meta
                     name="description"
-                    content="gerado por Add'{}' developer"
+                    content="Freelance fornecendo serviços de programação e desing. Estudo Analise e desenvolvimento de sistemas. Junte-se a mim e construa seu web/app site!"
+                />
+
+                {/* <!-- Open Graph / Facebook --> */}
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:url"
+                    content="https://portifolio-edy-ux.vercel.app/"
+                />
+                <meta property="og:title" content="Portfólio  —  Ednei Lopes" />
+                <meta
+                    property="og:description"
+                    content="Freelance fornecendo serviços de programação e desing. Estudo Analise e desenvolvimento de sistemas. Junte-se a mim e construa seu web/app site!"
+                />
+                <meta
+                    property="og:image"
+                    content="../../public/metatagog.png"
+                />
+
+                {/* <!-- Twitter --> */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                    property="twitter:url"
+                    content="https://portifolio-edy-ux.vercel.app/"
+                />
+                <meta
+                    property="twitter:title"
+                    content="Portfólio  —  Ednei Lopes"
+                />
+                <meta
+                    property="twitter:description"
+                    content="Freelance fornecendo serviços de programação e desing. Estudo Analise e desenvolvimento de sistemas. Junte-se a mim e construa seu web/app site!"
+                />
+                <meta
+                    property="twitter:image"
+                    content="../../public/metatagog.png"
                 />
             </Head>
 
             <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
                 <section className="min-h-screen">
                     <Header />
-                    <div className="text-center p-10 ">
-                        <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
-                            Edy Lopes
-                        </h2>
-                        <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-                            Desenvolvedor FullStack.
-                        </h3>
-                        <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                            Freelance fornecendo serviços de programação e
-                            desing. Estudo Analise e desenvolvimento de
-                            sistemas. Junte-se a mim e construa seu web/app
-                            site!
-                        </p>
-                        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-                            <a href="https://github.com/Edy-ux" target="_blank">
-                                <AiFillGithub />
-                            </a>
-                            <a href="https://github.com/Edy-ux" target="_blank">
-                                <AiFillLinkedin />
-                            </a>
-                            <a href="https://github.com/Edy-ux" target="_blank">
-                                <AiFillYoutube />
-                            </a>
-                        </div>
-
-                        <div className="mx-auto  bg-gradient-to-b from-teal-500 rounded-full w-80 h-80  overflow-hidden mt-20 md:h-96 md:w-96">
-                            <Image src={devedy} alt="profile" />
-                        </div>
-                    </div>
+                    <Profile />
                 </section>
                 <section id="services">
                     <div>
@@ -122,11 +128,13 @@ export default function Home() {
                                 Você tem uma ideia para o seu próximo grande
                                 site? Vamos torná-lo uma realidade.
                             </p>
-                            <h4 className="py-4 text-teal-600">Design Tools</h4>
-                            <p className="text-gray-800 py-1">Photoshop</p>
-                            <p className="text-gray-800 py-1">Illustrator</p>
-                            <p className="text-gray-800 py-1">Figma</p>
-                            <p className="text-gray-800 py-1">Indesign</p>
+                            <h4 className="py-4 text-teal-600"> Tools</h4>
+                            <p className="text-gray-800 py-1">React</p>
+                            <p className="text-gray-800 py-1">Nextjs</p>
+                            <p className="text-gray-800 py-1">Tailwind Css</p>
+                            <p className="text-gray-800 py-1">
+                                Styled Components
+                            </p>
                         </div>
                         <div
                             className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1  hover:-translate-y-4 
