@@ -12,12 +12,11 @@ import web5 from '../../public/web5.png';
 import web6 from '../../public/web6.png';
 import Header from '@/components/Header';
 import Profile from '@/components/Profile';
-import metatag from '../../public/metatagog.png';
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
     return (
-        <div className={darkMode ? 'dark' : ''}>
+        <div className={`${darkMode ? 'dark' : ''} min-h-screen`}>
             <Head>
                 <title>Portfólio — Ednei Lopes Add&#123; &#125;</title>
                 <meta name="title" content="Portfólio  —  Ednei Lopes" />
@@ -37,7 +36,10 @@ export default function Home() {
                     property="og:description"
                     content="Freelance fornecendo serviços de programação e desing. Estudo Analise e desenvolvimento de sistemas. Junte-se a mim e construa seu web/app site!"
                 />
-                <meta property="og:image" content={metatag} />
+                <meta
+                    property="og:image"
+                    content="https://github.com/Edy-ux/react-portifolio-with-tailwind/blob/master/public/metatagog.png"
+                />
 
                 {/* <!-- Twitter --> */}
                 <meta property="twitter:card" content="summary_large_image" />
@@ -58,9 +60,9 @@ export default function Home() {
                     content="../../public/metatagog.png"
                 />
             </Head>
-            <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
-                <section className="min-h-screen">
-                    <Header {...{ setDarkMode }} />
+            <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 ">
+                <Header {...{ setDarkMode }} />
+                <section className="mt-20">
                     <Profile />
                 </section>
                 <section id="services">
