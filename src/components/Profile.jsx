@@ -1,18 +1,33 @@
-import { AiFillLinkedin, AiFillYoutube, AiFillGithub } from 'react-icons/ai';
+import {
+    AiFillLinkedin,
+    AiFillYoutube,
+    AiFillGithub,
+    AiFillCode,
+} from 'react-icons/ai';
 import Image from 'next/image';
 import devedy from '../../public/avatar.png';
+import WriteMachine from './WriteMachine';
 const Profile = () => {
     return (
         <div className="text-center p-10 py-10">
-            <h2 className=" font-semibold text-5xl py-2 text-teal-600  dark:text-teal-400 md:text-6xl">
-                Edy Lopes
-            </h2>
-            <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-                Desenvolvedor FullStack.
-            </h3>
+            <div>
+                <h2 className=" font-semibold text-3xl py-2 text-teal-600  dark:text-teal-400 md:text-5xl">
+                    <WriteMachine
+                        description="Olá, meu nome é Edy"
+                        hiddenCursor
+                    />
+                </h2>
+                <h3 className="text-2xl py-2 dark:text-white md:text-4xl">
+                    <WriteMachine
+                        description="Desenvolvedor FullStack."
+                        delay={3450}
+                    />
+                </h3>
+            </div>
+
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
                 Freelance fornecendo serviços de programação e desing. Estudo
-                Analise e desenvolvimento de sistemas. Junte-se a mim e construa
+                Análise e desenvolvimento de sistemas. Junte-se a mim e construa
                 seu web/app site!
             </p>
             <div className="text-4xl flex justify-center gap-16 py-3 text-gray-700">

@@ -27,14 +27,14 @@ const Body = () => {
                     <p className="text-lg text-justify md:text-center py-2 leading-8 text-gray-800 dark:text-gray-200">
                         Desde o início da minha jornada como desenvolvedor
                         freelancer, já fiz trabalho remoto para{' '}
-                        <span className="text-teal-500">Agências </span>
+                        <span className="text-teal-500">agências </span>
                         consultado para{' '}
                         <span className="text-teal-500">startups </span>e
                         colaborei com pessoas talentosas para criar produtos
                         digitais tanto para uso comercial quanto para o
                         consumidor final.
                     </p>
-                    <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                    <p className="md:text-center  text-base py-2 leading-8 text-gray-800 dark:text-gray-200">
                         Eu ofereço junto com meu time uma ampla gama de
                         serviços, incluindo design de marca e programação.
                     </p>

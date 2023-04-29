@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillCode, AiFillGithub } from 'react-icons/ai';
 import useHandleScroll from '@/hooks/useHandleScroll';
 import Link from 'next/link';
 
@@ -17,12 +17,12 @@ const Header = ({ setDarkToggle }) => {
     return (
         <nav
             ref={navRef}
-            className={`md:px-40 px-4 transition-all duration-300 ease-in-out  shadow-sm dark:border-b dark:border-b-slate-800 fixed ${
+            className={`md:px-40 px-4 transition-all duration-500 ease-in-out  shadow-sm dark:border-b dark:border-b-slate-800 fixed ${
                 !navBarStyle.top ? 'top-0' : '-top-20'
             } z-10 h-16  py-10 flex justify-between items-center bg-white dark:bg-gray-900  dark:text-white w-full`}
         >
             <div className="flex items-center  justify-between gap-3 w-full">
-                <h1 className="font-burtons font-normal text-xl">
+                <h1 className="font-burtons font-normal text-xl flex items-center gap-3">
                     developerbyedy
                 </h1>
                 <ul className="flex items-center  gap-3">
