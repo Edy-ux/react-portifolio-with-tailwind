@@ -15,7 +15,7 @@ const Profile = () => {
                 Analise e desenvolvimento de sistemas. Junte-se a mim e construa
                 seu web/app site!
             </p>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+            <div className="text-4xl flex justify-center gap-16 py-3 text-gray-700">
                 <a href="https://github.com/Edy-ux" target="_blank">
                     <AiFillGithub />
                 </a>
@@ -26,6 +26,7 @@ const Profile = () => {
                     <AiFillYoutube />
                 </a>
             </div>
+
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full overflow-hidden mt-20 md:h-96 md:w-96">
                 <Image
                     src={devedy}
