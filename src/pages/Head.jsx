@@ -25,7 +25,7 @@ const MyHead = () => {
                 />
                 <meta
                     property="og:image"
-                    content="https://github.com/Edy-ux/react-portifolio-with-tailwind/blob/master/public/imagemetatag.png"
+                    content="https://i.imgur.com/jwYCpjL.png"
                 />
 
                 {/* <!-- Twitter --> */}
@@ -44,7 +44,7 @@ const MyHead = () => {
                 />
                 <meta
                     property="og:image"
-                    content="https://github.com/Edy-ux/react-portifolio-with-tailwind/blob/master/public/metatagog.png"
+                    content="https://i.imgur.com/jwYCpjL.png"
                 />
             </Head>
         </>
